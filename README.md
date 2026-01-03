@@ -13,3 +13,8 @@ input: alpha is rainfall intensity (i.e., mean rainfall depth)
 input: w0 is root-zone soil water capacity (=nZr(s1-sw))
 input: Emax is potential evapotranspiration
 output: lbd is rainfall freqency
+
+function X = f_getMoments(filedirname)
+This function gets the rainfall statistics from GHCN-D files
+input: filedirname is the file direction and file name
+output: X is N by 11 matrix where each column refers to the mean, variance, 10, 20, ... 90 percentiles of rainfall depth; N is the number of 15-year non-overlapping data blocks
